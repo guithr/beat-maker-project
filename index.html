@@ -3,10 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beat Maker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Beatmaker</title>
   </head>
+
   <body>
-    <script src="./assets/js/"></script>
+    <div class="sequencer">
+      <div class="kick-track">
+        <div class="controls">
+          <h1>Kick</h1>
+          <button data-track="0" class="mute kick-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="kick-select" id="kick-select">
+            <option value="./assets/sounds/kick-classic.wav">
+              Classic Kick
+            </option>
+            <option value="./assets/sounds/kick-808.wav">Kick 808</option>
+            <option value="./assets/sounds/kick-heavy.wav">Kick Heavy</option>
+          </select>
+        </div>
+
+        <div class="kick">
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+        </div>
+      </div>
+      <div class="snare-track">
+        <div class="controls">
+          <h1>Snare</h1>
+          <button data-track="1" class="mute snare-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="snare-select" id="snare-select">
+            <option value="./assets/sounds/snare-classic.wav">
+              Classic Snare
+            </option>
+            <option value="./assets/sounds/snare-808.wav">Snare 808</option>
+            <option value="./assets/sounds/snareheavy.wav">Snare Heavy</option>
+          </select>
+        </div>
+
+        <div class="snare">
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
+        </div>
+      </div>
+      <div class="hihat-track">
+        <div class="controls">
+          <h1>Hihat</h1>
+          <button data-track="2" class="mute hihat-volume">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="hihat-select" id="hihat-select">
+            <option value="./assets/sounds/hihat-classic.wav">
+              Classic Hihat
+            </option>
+            <option value="./assets/sounds/hihat-808.wav">Hihat 808</option>
+          </select>
+        </div>
+
+        <div class="hihat">
+          <div class="pad hihat-pad b0"></div>
+          <div class="pad hihat-pad b1"></div>
+          <div class="pad hihat-pad b2"></div>
+          <div class="pad hihat-pad b3"></div>
+          <div class="pad hihat-pad b4"></div>
+          <div class="pad hihat-pad b5"></div>
+          <div class="pad hihat-pad b6"></div>
+          <div class="pad hihat-pad b7"></div>
+        </div>
+      </div>
+    </div>
+    <button class="play">Play</button>
+    <audio class="kick-sound" src="./assets/sounds/kick-classic.wav"></audio>
+    <audio class="snare-sound" src="./assets/sounds/snare-classic.wav"></audio>
+    <audio class="hihat-sound" src="./assets/sounds/hihat-classic.wav"></audio>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
