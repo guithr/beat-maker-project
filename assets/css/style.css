@@ -46,27 +46,27 @@ svg {
 }
 
 .kick-pad {
-  background-color: rgb(87, 77, 154);
+  background-color: rgb(147, 137, 211);
 }
 
 .kick-pad.active {
-  background-color: rgb(117, 100, 244);
+  background-color: rgb(109, 91, 247);
 }
 
 .snare-pad {
-  background-color: rgb(214, 89, 89);
+  background-color: rgb(233, 129, 129);
 }
 
 .snare-pad.active {
-  background-color: rgb(204, 56, 56);
+  background-color: rgb(246, 53, 53);
 }
 
 .hihat-pad {
-  background-color: rgb(85, 171, 202);
+  background-color: rgb(169, 222, 241);
 }
 
 .hihat-pad.active {
-  background-color: rgb(39, 191, 246);
+  background-color: rgb(1, 187, 255);
 }
 
 .controls {
@@ -104,4 +104,13 @@ svg {
 select {
   padding: 1rem;
   font-size: 1rem;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
