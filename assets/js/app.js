@@ -56,13 +56,13 @@ class DrumKit {
       }, interval);
     }
   }
-  updatedBtn() {
-    if (this.isPlaying) {
-      this.playBtn.innerText = "Play";
-      this.playBtn.classList.remove("active");
-    } else {
+  updateBtn() {
+    if (!this.isPlaying) {
       this.playBtn.innerText = "Stop";
       this.playBtn.classList.add("active");
+    } else {
+      this.playBtn.innerText = "Play";
+      this.playBtn.classList.remove("active");
     }
   }
   changeSound(e) {
@@ -118,7 +118,7 @@ class DrumKit {
     clearInterval(this.isPlaying);
     this.isPlaying = null;
     const playBtn = document.querySelector(".play");
-    if (playBtn.classList.contains(".active")) {
+    if (playBtn.classList.contains("active")) {
       this.start();
     }
   }
@@ -126,7 +126,8 @@ class DrumKit {
 
 const drumKit = new DrumKit();
 
-//Event listeners
+//Event Listeners
+
 drumKit.pads.forEach((pad) => {
   pad.addEventListener("click", drumKit.activePad);
   pad.addEventListener("animationend", function () {
@@ -135,17 +136,15 @@ drumKit.pads.forEach((pad) => {
 });
 
 drumKit.playBtn.addEventListener("click", function () {
-  drumKit.updatedBtn();
+  drumKit.updateBtn();
   drumKit.start();
 });
 
 drumKit.selects.forEach((select) => {
-  // (e) that's means (event)
   select.addEventListener("change", function (e) {
     drumKit.changeSound(e);
   });
 });
-
 drumKit.muteBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     drumKit.mute(e);
@@ -155,7 +154,6 @@ drumKit.muteBtns.forEach((btn) => {
 drumKit.tempoSlider.addEventListener("input", function (e) {
   drumKit.changeTempo(e);
 });
-
 drumKit.tempoSlider.addEventListener("change", function (e) {
   drumKit.updateTempo(e);
 });
