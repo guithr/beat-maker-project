@@ -94,7 +94,18 @@
         </div>
       </div>
       <button class="play">Play</button>
+      <div class="tempo">
+        <input
+          type="range"
+          class="tempo-slider"
+          max="300"
+          min="50"
+          value="150"
+        />
+        <p>Tempo: <span class="tempo-nr">150</span></p>
+      </div>
     </div>
+
     <audio class="kick-sound" src="./assets/sounds/kick-classic.wav"></audio>
     <audio class="snare-sound" src="./assets/sounds/snare-classic.wav"></audio>
     <audio class="hihat-sound" src="./assets/sounds/hihat-classic.wav"></audio>
